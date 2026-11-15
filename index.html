@@ -14,7 +14,6 @@
             --text-muted: #8b92a8;
             --accent-purple: #a855f7;
             --accent-green: #5ce63a;
-            --accent-blue: #3498db;
             --accent-gold: #f1c40f;
         }
 
@@ -31,14 +30,47 @@
             overflow-x: hidden;
         }
 
-        /* GÓRNY PASEK */
+        /* ŻÓŁTY GÓRNY PASEK EVENTOWY */
+        .top-banner-bar {
+            background: linear-gradient(90deg, #f59e0b, #eab308, #f97316);
+            color: #111;
+            padding: 6px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            font-weight: 800;
+            position: relative;
+            z-index: 1001;
+        }
+
+        .top-banner-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 auto;
+        }
+
+        .top-banner-btn {
+            background-color: #111;
+            color: #eab308;
+            border: none;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 900;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        /* GÓRNY PASEK NAWIGACYJNY */
         header {
             position: sticky;
             top: 0;
             z-index: 1000;
             background-color: var(--bg-header);
             border-bottom: 1px solid #222534;
-            height: 62px;
+            height: 60px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -55,19 +87,17 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             text-decoration: none;
             font-size: 21px;
             font-weight: 900;
             font-style: italic;
-            letter-spacing: 0.5px;
             cursor: pointer;
         }
 
-        /* DOKŁADNE LOGO Z TWOJEGO ZDJĘCIA */
         .logo-img {
-            width: 34px;
-            height: 34px;
+            width: 32px;
+            height: 32px;
             border-radius: 6px;
             object-fit: cover;
         }
@@ -77,7 +107,7 @@
 
         .nav-links {
             display: flex;
-            gap: 20px;
+            gap: 18px;
             list-style: none;
         }
 
@@ -92,7 +122,6 @@
             align-items: center;
             gap: 6px;
             cursor: pointer;
-            letter-spacing: 0.4px;
         }
 
         .nav-links a svg {
@@ -117,7 +146,7 @@
 
         .gem-box {
             background-color: #261e38;
-            height: 38px;
+            height: 36px;
             padding: 0 12px;
             border-radius: 6px;
             display: flex;
@@ -133,7 +162,7 @@
             align-items: center;
             background-color: #162a20;
             border-radius: 6px;
-            height: 38px;
+            height: 36px;
             overflow: hidden;
         }
 
@@ -141,7 +170,7 @@
             display: flex;
             align-items: center;
             gap: 7px;
-            padding: 0 14px;
+            padding: 0 12px;
             color: #5ce63a;
             font-size: 13px;
             font-weight: 800;
@@ -152,22 +181,19 @@
             color: #0e170c;
             border: none;
             height: 100%;
-            padding: 0 14px;
-            font-size: 12px;
+            padding: 0 12px;
+            font-size: 11px;
             font-weight: 900;
             cursor: pointer;
             text-transform: uppercase;
             display: flex;
             align-items: center;
-            gap: 6px;
-            transition: filter 0.2s;
+            gap: 4px;
         }
 
-        .btn-deposit:hover { filter: brightness(1.08); }
-
         .icon-btn {
-            width: 38px;
-            height: 38px;
+            width: 36px;
+            height: 36px;
             background-color: #212432;
             border-radius: 6px;
             display: flex;
@@ -175,14 +201,13 @@
             justify-content: center;
             color: #8f96ad;
             cursor: pointer;
-            transition: background-color 0.2s, color 0.2s;
         }
 
         .icon-btn:hover { background-color: #2a2e40; color: #ffffff; }
 
         .avatar-box {
-            width: 38px;
-            height: 38px;
+            width: 36px;
+            height: 36px;
             background-color: #2a2d34;
             border: 1px solid #3f434e;
             border-radius: 6px;
@@ -191,7 +216,7 @@
             align-items: center;
             justify-content: center;
             color: #e2e8f0;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
             cursor: pointer;
         }
@@ -202,69 +227,71 @@
             left: 2px;
             background-color: #161822;
             color: #ffffff;
-            font-size: 9px;
+            font-size: 8px;
             font-weight: 800;
-            padding: 1px 4px;
-            border-radius: 3px;
-            line-height: 1;
+            padding: 1px 3px;
+            border-radius: 2px;
         }
 
-        /* PASEK PODMENU SKRZYNEK */
+        /* PASEK PRZEWIJANY SKÍNÓW POD MENU */
         .sub-nav {
             background-color: #151722;
             border-bottom: 1px solid #222534;
-            padding: 8px 20px;
+            padding: 6px 16px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             overflow-x: auto;
+            white-space: nowrap;
         }
+
+        .sub-nav::-webkit-scrollbar { height: 4px; }
+        .sub-nav::-webkit-scrollbar-thumb { background: #2a2e40; border-radius: 2px; }
 
         .online-counter {
             background-color: #1a1e2d;
             border-radius: 6px;
-            padding: 6px 12px;
-            font-size: 12px;
+            padding: 6px 10px;
+            font-size: 11px;
             font-weight: 700;
             color: var(--accent-green);
             display: flex;
             align-items: center;
             gap: 6px;
-            min-width: 85px;
             border: 1px solid #262c40;
+            flex-shrink: 0;
         }
 
         .sub-nav-item {
-            min-width: 95px;
-            background: linear-gradient(180deg, rgba(168, 85, 247, 0.1) 0%, var(--bg-card) 100%);
+            min-width: 75px;
+            height: 52px;
+            background: linear-gradient(180deg, rgba(168, 85, 247, 0.12) 0%, #1a1d28 100%);
             border: 1px solid #282d42;
             border-radius: 6px;
-            padding: 6px 8px;
+            padding: 4px;
             text-align: center;
-            font-size: 11px;
+            font-size: 9px;
             cursor: pointer;
-            transition: border-color 0.2s;
             color: var(--text-muted);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            flex-shrink: 0;
         }
 
-        .sub-nav-item:hover, .sub-nav-item.active {
-            border-color: var(--accent-purple);
-            color: var(--text-main);
-        }
-
+        .sub-nav-item.active { border-color: var(--accent-purple); color: #fff; }
         .sub-nav-item img {
-            width: 50px;
-            height: 32px;
+            width: 42px;
+            height: 26px;
             object-fit: contain;
-            display: block;
-            margin: 0 auto 2px auto;
         }
 
-        /* PASEK PROMOCJI */
+        /* PASEK PROMOCJI I OPCJI */
         .promo-sub-bar {
             background-color: #161822;
             border-bottom: 1px solid #222534;
-            padding: 10px 20px;
+            padding: 8px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -274,18 +301,19 @@
 
         .promo-left {
             display: flex;
-            gap: 15px;
+            gap: 12px;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .promo-btn {
             background: linear-gradient(90deg, #f59e0b, #d97706);
             color: #111;
             border: none;
-            padding: 8px 14px;
+            padding: 6px 12px;
             border-radius: 6px;
             font-weight: 800;
-            font-size: 12px;
+            font-size: 11px;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -294,21 +322,21 @@
 
         .mini-tab {
             color: var(--text-muted);
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 700;
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 4px;
         }
         .mini-tab:hover { color: white; }
 
         .pass-badge {
             background: linear-gradient(90deg, #9333ea, #db2777);
             color: white;
-            padding: 6px 12px;
+            padding: 5px 10px;
             border-radius: 6px;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 800;
             cursor: pointer;
         }
@@ -317,23 +345,24 @@
         .container {
             max-width: 1360px;
             margin: 0 auto;
-            padding: 24px;
+            padding: 20px;
         }
 
         .page-content { display: none; }
         .page-content.active { display: block; }
 
+        /* GÓRNE KAFELKI (GEMS, DESTINY, RANKING) */
         .top-cases-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 16px;
-            margin-bottom: 28px;
+            margin-bottom: 24px;
         }
 
         .special-card {
             background-color: var(--bg-card);
-            border-radius: 12px;
-            padding: 20px;
+            border-radius: 10px;
+            padding: 16px 20px;
             border: 1px solid #262a3b;
             display: flex;
             justify-content: space-between;
@@ -343,43 +372,44 @@
         }
 
         .special-card:hover {
-            transform: translateY(-3px);
+            transform: translateY(-2px);
             background-color: var(--bg-card-hover);
             border-color: var(--accent-purple);
         }
 
-        /* BANER */
+        /* BANER GŁÓWNY SPACE SKINS */
         .event-banner {
             background: radial-gradient(circle at center, #1b3b6f 0%, #0f172a 100%);
             border: 1px solid #2a4375;
             border-radius: 12px;
-            padding: 40px 20px;
+            padding: 35px 20px;
             text-align: center;
             margin-bottom: 24px;
+            position: relative;
         }
 
         .event-banner h1 {
-            font-size: 36px;
-            letter-spacing: 6px;
+            font-size: 32px;
+            letter-spacing: 5px;
             color: #60a5fa;
             text-shadow: 0 0 20px rgba(96, 165, 250, 0.6);
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
 
         .countdown {
             display: inline-flex;
-            gap: 16px;
+            gap: 12px;
             background: rgba(0, 0, 0, 0.4);
-            padding: 10px 24px;
+            padding: 8px 20px;
             border-radius: 8px;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
 
         .countdown div span {
             display: block;
-            font-size: 10px;
+            font-size: 9px;
             color: var(--text-muted);
             text-transform: uppercase;
         }
@@ -387,19 +417,19 @@
         /* FILTRY */
         .filter-bar {
             background-color: var(--bg-header);
-            padding: 14px 20px;
+            padding: 12px 18px;
             border-radius: 10px;
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 32px;
+            margin-bottom: 28px;
         }
 
         .filter-group {
             display: flex;
-            gap: 12px;
+            gap: 10px;
             align-items: center;
         }
 
@@ -407,44 +437,43 @@
             background-color: #12131a;
             border: 1px solid #2a2e3f;
             color: white;
-            padding: 10px 14px;
+            padding: 8px 12px;
             border-radius: 6px;
-            font-size: 13px;
+            font-size: 12px;
             outline: none;
         }
 
-        .search-input { width: 240px; }
-        .price-input { width: 90px; }
+        .search-input { width: 220px; }
+        .price-input { width: 80px; }
 
         .section-title {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 800;
             text-transform: uppercase;
-            margin-bottom: 18px;
+            margin-bottom: 16px;
             display: flex;
             align-items: center;
-            gap: 10px;
-            letter-spacing: 0.5px;
+            gap: 8px;
         }
 
         .section-title::before {
             content: "★";
-            color: var(--accent-blue);
-            font-size: 20px;
+            color: #3b82f6;
+            font-size: 18px;
         }
 
-        /* SIATKA SKRZYNEK Z GRAFIKAMI */
+        /* SIATKA SKRZYNEK */
         .cases-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 18px;
+            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+            gap: 16px;
             margin-bottom: 48px;
         }
 
         .case-card {
             background-color: var(--bg-card);
-            border-radius: 12px;
-            padding: 14px;
+            border-radius: 10px;
+            padding: 12px;
             position: relative;
             transition: transform 0.2s, background-color 0.2s;
             cursor: pointer;
@@ -455,7 +484,7 @@
         }
 
         .case-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-4px);
             background-color: var(--bg-card-hover);
             border-color: var(--accent-purple);
         }
@@ -464,36 +493,36 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .badge-new {
             background-color: #0ea5e9;
             color: white;
-            font-size: 10px;
+            font-size: 9px;
             font-weight: 800;
-            padding: 3px 8px;
-            border-radius: 4px;
+            padding: 2px 6px;
+            border-radius: 3px;
             text-transform: uppercase;
         }
 
         .badge-pts {
             color: #c58aff;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 700;
         }
 
         .case-img-box {
             width: 100%;
-            height: 140px;
+            height: 130px;
             background: radial-gradient(circle, #2d3246 0%, #1a1d28 100%);
-            border-radius: 8px;
+            border-radius: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             overflow: hidden;
-            padding: 10px;
+            padding: 8px;
         }
 
         .case-img-box img {
@@ -507,12 +536,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-top: 8px;
+            padding-top: 6px;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .case-name { font-size: 13px; font-weight: 700; color: #e2e8f0; }
-        .case-price { font-size: 13px; font-weight: 800; color: #a3e635; }
+        .case-name { font-size: 12px; font-weight: 700; color: #e2e8f0; }
+        .case-price { font-size: 12px; font-weight: 800; color: #a3e635; }
 
         /* DOLNY PASEK EKWIPUNKU */
         .bottom-bar {
@@ -523,13 +552,13 @@
             background-color: #25293a;
             border: 1px solid #383e56;
             border-bottom: none;
-            padding: 10px 24px;
-            border-radius: 12px 12px 0 0;
-            font-size: 12px;
+            padding: 8px 20px;
+            border-radius: 10px 10px 0 0;
+            font-size: 11px;
             font-weight: 800;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             box-shadow: 0 -4px 15px rgba(0,0,0,0.4);
             cursor: pointer;
             z-index: 999;
@@ -538,34 +567,35 @@
         .bottom-bar span {
             background-color: white;
             color: #111;
-            padding: 2px 7px;
-            border-radius: 10px;
-            font-size: 11px;
+            padding: 1px 6px;
+            border-radius: 8px;
+            font-size: 10px;
         }
 
         .generic-page-view {
             text-align: center;
             padding: 80px 20px;
         }
-        .generic-page-view h2 {
-            font-size: 32px;
-            color: var(--accent-purple);
-            margin-bottom: 12px;
-        }
-        .generic-page-view p {
-            color: var(--text-muted);
-            font-size: 15px;
-        }
+        .generic-page-view h2 { font-size: 28px; color: var(--accent-purple); margin-bottom: 10px; }
+        .generic-page-view p { color: var(--text-muted); font-size: 14px; }
     </style>
 </head>
 <body>
 
-    <!-- GÓRNY PASEK NAWIGACYJNY -->
+    <!-- GÓRNY ŻÓŁTY PASEK EVENTOWY -->
+    <div class="top-banner-bar">
+        <div style="width: 30px;"></div>
+        <div class="top-banner-content">
+            <span>CHICKEN PASS</span> — Nie czekaj! Biegnij zdobywać EGGXP w bitwach oraz skrzynkách i odbieraj unikalne Chickendropy wraz z kolejnymi poziomami!
+        </div>
+        <button class="top-banner-btn" onclick="alert('Sprawdź teraz')">SPRAWDŹ TERAZ</button>
+    </div>
+
+    <!-- GŁÓWNY PASEK NAWIGACYJNY -->
     <header>
         <div class="nav-left">
             <a class="logo" onclick="switchPage('skrzynki')">
-                <!-- Twoje dokładne logo z lwem w lewym górnym rogu -->
-                <img src="https://i.imgur.com/8QjL4j3.png" alt="G4SKINS Logo" class="logo-img" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23a855f7\'><path d=\'M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm-1.5 13.5L7 12l1.41-1.41L10.5 12.67l5.09-5.09L17 9l-6.5 6.5z\'/></svg>'">
+                <img src="https://i.imgur.com/8QjL4j3.png" alt="Logo" class="logo-img">
                 <span><span class="logo-g4">G4</span><span class="logo-skins">SKINS</span></span>
             </a>
 
@@ -605,52 +635,52 @@
 
         <div class="nav-right">
             <div class="gem-box">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="#d946ef"><path d="M19 3H5L2 9l10 12L22 9l-3-6z"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#d946ef"><path d="M19 3H5L2 9l10 12L22 9l-3-6z"/></svg>
                 440
             </div>
 
             <div class="wallet-group">
                 <div class="wallet-balance">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#5ce63a"><path d="M21 18v1c0 1.1-.9 2-2 2H5c-1.11 0-2-.9-2-2V5c0-1.1.89-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="#5ce63a"><path d="M21 18v1c0 1.1-.9 2-2 2H5c-1.11 0-2-.9-2-2V5c0-1.1.89-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
                     647,00 zł
                 </div>
-                <button class="btn-deposit" onclick="alert('Doładowanie konta')">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="#0e170c"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+                <button class="btn-deposit" onclick="alert('Doładowanie')">
                     DOŁADUJ +10%
                 </button>
             </div>
 
-            <div class="icon-btn" title="Powiadomienia"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg></div>
-            <div class="icon-btn" title="Ustawienia"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg></div>
+            <div class="icon-btn" title="Powiadomienia"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg></div>
+            <div class="icon-btn" title="Ustawienia"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c-.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg></div>
             <div class="avatar-box" title="Profil">? <span class="avatar-level">9</span></div>
-            <div class="icon-btn" title="Menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></div>
+            <div class="icon-btn" title="Menu"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></div>
         </div>
     </header>
 
-    <!-- PASEK PODMENU SKRZYNEK -->
+    <!-- PASEK SKÍNÓW I KATEGORII POD MENU -->
     <div class="sub-nav" id="sub-nav-bar">
         <div class="online-counter">
-            <span style="width:8px; height:8px; background-color:var(--accent-green); border-radius:50%; display:inline-block;"></span>
+            <span style="width:7px; height:7px; background-color:var(--accent-green); border-radius:50%; display:inline-block;"></span>
             729
         </div>
-        <div class="sub-nav-item active"><div style="font-size:16px;">👑</div>Wyróżnione</div>
-        <div class="sub-nav-item"><img src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FABt7PLfYQJD_9O7hIS0m_7zO6-dn2xZ_Isp3ruU9Iit2gCw_kVqMGqhd9ORcFNrYV6F_Fi_xO6508W6uM7Jn3pkvCV2snnZnx2wgwYMMbc81p5tTQ/60fx36f" alt="">Capillary</div>
-        <div class="sub-nav-item"><img src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposr-kLAtl7PLZTjlH_9mkgL-OmuLzM6jclkBXvcR2jeuT8N3wjAXh_xFsZW-hJ9aSdwRrNguF-Fjtwr271Me6uMvJwCY27XUg5X2Mn0WyhBxSLrs8aeu8XQ/60fx36f" alt="">Candy Apple</div>
-        <div class="sub-nav-item"><img src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV092lnYmOhcj5Nr_Yg2Zu5Mx2gv2SrNql2wex-kRvMW-hLtKRIgVvZw2DrFjrkOm9h8S_vpzJmHU17CYi7XndnRO3hBxSLrs8t407tQ0/60fx36f" alt="">Valence</div>
-        <div class="sub-nav-item"><img src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopujweztwWLhHYiRvG8--g5a0m_7zO6-dn2xZ_Isp3-uW8Yjy2FLhqEpuMGiicY_Cd1RsNlqGr1brk-m9g8O9vMrNy3s263VztH-MmhqywUYMMe7J7F0/60fx36f" alt="">Heat Treated</div>
-        <div class="sub-nav-item"><img src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV092lnYmOhcj5Nr_Yg2Zu5Mx2gv2SrNql3wDjqBtrMTvyJteccgY6NArT_gK9k7ru1sDv7p_AzHE37nRw5yuMmEezhx1SLrs8079mO64/60fx36f" alt="">Kintsugi</div>
-        <div class="sub-nav-item"><img src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJn7-HkvP9JITTglRd4cJ5nqeW9Irz2Qbj-0FuYWn6Io6WcwVoNArTr1Drx7u5gcO07pnKm3VlvDYrsynCnkSwhhhEa-M81_vIRQ/60fx36f" alt="">Sand Spray</div>
+        <div class="sub-nav-item active"><div style="font-size:14px;">👑</div>Wyróżnione</div>
+        <div class="sub-nav-item"><img src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FABt7PLfYQJD_9O7hIS0m_7zO6-dn2xZ_Isp3ruU9Iit2gCw_kVqMGqhd9ORcFNrYV6F_Fi_xO6508W6uM7Jn3pkvCV2snnZnx2wgwYMMbc81p5tTQ/60fx36f">Capillary</div>
+        <div class="sub-nav-item"><img src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposr-kLAtl7PLZTjlH_9mkgL-OmuLzM6jclkBXvcR2jeuT8N3wjAXh_xFsZW-hJ9aSdwRrNguF-Fjtwr271Me6uMvJwCY27XUg5X2Mn0WyhBxSLrs8aeu8XQ/60fx36f">Candy Apple</div>
+        <div class="sub-nav-item"><img src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV092lnYmOhcj5Nr_Yg2Zu5Mx2gv2SrNql2wex-kRvMW-hLtKRIgVvZw2DrFjrkOm9h8S_vpzJmHU17CYi7XndnRO3hBxSLrs8t407tQ0/60fx36f">Valence</div>
+        <div class="sub-nav-item"><img src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopujweztwWLhHYiRvG8--g5a0m_7zO6-dn2xZ_Isp3-uW8Yjy2FLhqEpuMGiicY_Cd1RsNlqGr1brk-m9g8O9vMrNy3s263VztH-MmhqywUYMMe7J7F0/60fx36f">Heat Treated</div>
+        <div class="sub-nav-item"><img src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV092lnYmOhcj5Nr_Yg2Zu5Mx2gv2SrNql3wDjqBtrMTvyJteccgY6NArT_gK9k7ru1sDv7p_AzHE37nRw5yuMmEezhx1SLrs8079mO64/60fx36f">Kintsugi</div>
+        <div class="sub-nav-item"><img src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJn7-HkvP9JITTglRd4cJ5nqeW9Irz2Qbj-0FuYWn6Io6WcwVoNArTr1Drx7u5gcO07pnKm3VlvDYrsynCnkSwhhhEa-M81_vIRQ/60fx36f">Sand Spray</div>
     </div>
 
-    <!-- PASEK PROMOCJI -->
+    <!-- PASEK PROMOCJI I OPCJI -->
     <div class="promo-sub-bar">
         <div class="promo-left">
-            <button class="promo-btn" onclick="alert('Wpisz kod promocyjny')">🎁 KOD PROMOCYJNY</button>
-            <div class="mini-tab" onclick="alert('Odbierz dzienną skrzynkę')">⭐ DZIENNA SKRZYNKA</div>
+            <button class="promo-btn" onclick="alert('Kod promocyjny')">🎁 KOD PROMOCYJNY</button>
+            <div class="mini-tab" onclick="alert('Dzienna skrzynka')">⭐ DZIENNA SKRZYNKA</div>
             <div class="mini-tab" onclick="alert('Skrzynki EXP')">📦 SKRZYNKI EXP</div>
-            <div class="pass-badge" onclick="alert('Chicken Pass aktywowany')">🐓 NOWOŚCI: CHICKEN PASS</div>
+            <div class="pass-badge" onclick="alert('Chicken Pass')">🐓 NOWOŚCI: CHICKEN PASS</div>
+            <div style="background: rgba(59,130,246,0.15); color: #60a5fa; padding: 4px 10px; border-radius: 6px; font-size: 10px; font-weight: 700; cursor:pointer;" onclick="alert('Darmowe prezenty')">🎁 DARMOWE PREZENTY</div>
         </div>
-        <div style="display: flex; gap: 14px; color: var(--text-muted); font-size: 16px;">
+        <div style="display: flex; gap: 12px; color: var(--text-muted); font-size: 14px;">
             <span style="cursor:pointer;">🌐</span>
             <span style="cursor:pointer;">📸</span>
             <span style="cursor:pointer;">✖</span>
@@ -662,33 +692,34 @@
     <!-- ZAWARTOŚĆ STRONY -->
     <div class="container">
 
-        <!-- 1. ZAKŁADKA SKRZYNKI -->
+        <!-- ZAKŁADKA SKRZYNKI -->
         <div id="page-skrzynki" class="page-content active">
+            <!-- GÓRNE KAFELKI SPECJALNE (GEMS, DESTINY, RANKING) -->
             <div class="top-cases-grid">
                 <div class="special-card" onclick="alert('Gems Case')">
                     <div>
-                        <div style="font-size: 18px; font-weight: 900; margin-bottom: 4px;">GEMS CASE</div>
-                        <div style="font-size: 12px; color: var(--text-muted);">Skrzynka kryształowa</div>
+                        <div style="font-size: 15px; font-weight: 900; margin-bottom: 2px;">GEMS CASE</div>
+                        <div style="font-size: 11px; color: var(--text-muted);">Skrzynka kryształowa</div>
                     </div>
-                    <div style="font-size: 28px;">💎</div>
+                    <div style="font-size: 24px;">💎</div>
                 </div>
                 <div class="special-card" onclick="alert('Destiny Case')">
                     <div>
-                        <div style="font-size: 18px; font-weight: 900; margin-bottom: 4px;">DESTINY CASE</div>
-                        <div style="font-size: 12px; color: var(--text-muted);">Los przeznaczenia</div>
+                        <div style="font-size: 15px; font-weight: 900; margin-bottom: 2px;">DESTINY CASE</div>
+                        <div style="font-size: 11px; color: var(--text-muted);">Los przeznaczenia</div>
                     </div>
-                    <div style="font-size: 28px;">🔮</div>
+                    <div style="font-size: 24px;">🔮</div>
                 </div>
                 <div class="special-card" onclick="alert('Ranking')">
                     <div>
-                        <div style="font-size: 18px; font-weight: 900; margin-bottom: 4px;">RANKING</div>
-                        <div style="font-size: 12px; color: var(--text-muted);">Sprawdź pozycje</div>
+                        <div style="font-size: 15px; font-weight: 900; margin-bottom: 2px;">RANKING</div>
+                        <div style="font-size: 11px; color: var(--text-muted);">Sprawdź pozycje</div>
                     </div>
-                    <div style="font-size: 28px;">🏆</div>
+                    <div style="font-size: 24px;">🏆</div>
                 </div>
             </div>
 
-            <!-- BANER -->
+            <!-- BANER SPACE SKINS -->
             <div class="event-banner">
                 <h1>SPACE SKINS</h1>
                 <div class="countdown">
@@ -700,7 +731,7 @@
                     <div>:</div>
                     <div>09<span>sek</span></div>
                 </div>
-                <p style="font-size: 12px; color: #94a3b8; letter-spacing: 1px;">SPRÓBUJ ZNALEŹĆ UKRYTĄ SKRZYNKĘ NA BANERZE!</p>
+                <p style="font-size: 11px; color: #94a3b8; letter-spacing: 1px;">SPRÓBUJ ZNALEŹĆ UKRYTĄ SKRZYNKĘ NA BANERZE!</p>
             </div>
 
             <!-- FILTRY -->
@@ -717,84 +748,53 @@
                     <input type="text" class="price-input" placeholder="0,00 zł">
                 </div>
                 <div class="filter-group">
-                    <label style="font-size: 13px; color: var(--text-muted); display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                    <label style="font-size: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 6px; cursor: pointer;">
                         <input type="checkbox"> Wystarczające saldo
                     </label>
                 </div>
             </div>
 
-            <!-- SKRZYNKI SPACESKINS Z GRAFIKAMI -->
+            <!-- SEKCJA SKRZYNEK -->
             <div class="section-title">SPACESKINS</div>
             <div class="cases-grid">
-                <div class="case-card" onclick="alert('Otwierasz Zero Gravity')">
+                <div class="case-card" onclick="alert('Zero Gravity')">
                     <div class="case-badges"><span class="badge-new">Nowość</span><span class="badge-pts">♥ 15</span></div>
-                    <div class="case-img-box"><img src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV092lnYmOhcj5Nr_Yg2Zu5Mx2gv2SrNql2wex-kRvMW-hLtKRIgVvZw2DrFjrkOm9h8S_vpzJmHU17CYi7XndnRO3hBxSLrs8t407tQ0/200fx140f" alt="Zero Gravity"></div>
+                    <div class="case-img-box"><img src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV092lnYmOhcj5Nr_Yg2Zu5Mx2gv2SrNql2wex-kRvMW-hLtKRIgVvZw2DrFjrkOm9h8S_vpzJmHU17CYi7XndnRO3hBxSLrs8t407tQ0/200fx140f"></div>
                     <div class="case-footer"><span class="case-name">Zero Gravity</span><span class="case-price">4,00 zł</span></div>
                 </div>
-
-                <div class="case-card" onclick="alert('Otwierasz Xenothrone')">
+                <div class="case-card" onclick="alert('Xenothrone')">
                     <div class="case-badges"><span class="badge-new">Nowość</span><span class="badge-pts">♥ 55</span></div>
-                    <div class="case-img-box"><img src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FABt7PLfYQJD_9O7hIS0m_7zO6-dn2xZ_Isp3ruU9Iit2gCw_kVqMGqhd9ORcFNrYV6F_Fi_xO6508W6uM7Jn3pkvCV2snnZnx2wgwYMMbc81p5tTQ/200fx140f" alt="Xenothrone"></div>
+                    <div class="case-img-box"><img src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FABt7PLfYQJD_9O7hIS0m_7zO6-dn2xZ_Isp3ruU9Iit2gCw_kVqMGqhd9ORcFNrYV6F_Fi_xO6508W6uM7Jn3pkvCV2snnZnx2wgwYMMbc81p5tTQ/200fx140f"></div>
                     <div class="case-footer"><span class="case-name">Xenothrone</span><span class="case-price">14,00 zł</span></div>
                 </div>
-
-                <div class="case-card" onclick="alert('Otwierasz Space Chillin')">
+                <div class="case-card" onclick="alert('Space Chillin')">
                     <div class="case-badges"><span class="badge-new">Nowość</span><span class="badge-pts">♥ 75</span></div>
-                    <div class="case-img-box"><img src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposr-kLAtl7PLZTjlH_9mkgL-OmuLzM6jclkBXvcR2jeuT8N3wjAXh_xFsZW-hJ9aSdwRrNguF-Fjtwr271Me6uMvJwCY27XUg5X2Mn0WyhBxSLrs8aeu8XQ/200fx140f" alt="Space Chillin"></div>
+                    <div class="case-img-box"><img src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposr-kLAtl7PLZTjlH_9mkgL-OmuLzM6jclkBXvcR2jeuT8N3wjAXh_xFsZW-hJ9aSdwRrNguF-Fjtwr271Me6uMvJwCY27XUg5X2Mn0WyhBxSLrs8aeu8XQ/200fx140f"></div>
                     <div class="case-footer"><span class="case-name">Space Chillin</span><span class="case-price">20,00 zł</span></div>
                 </div>
-
-                <div class="case-card" onclick="alert('Otwierasz Skin Abduction')">
+                <div class="case-card" onclick="alert('Skin Abduction')">
                     <div class="case-badges"><span class="badge-new">Nowość</span><span class="badge-pts">♥ 125</span></div>
-                    <div class="case-img-box"><img src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotujweztwWLhHYiRvG8--g5a0m_7zO6-dn2xZ_Isp3-uW8Yjy2FLhqEpuMGiicY_Cd1RsNlqGr1brk-m9g8O9vMrNy3s263VztH-MmhqywUYMMe7J7F0/200fx140f" alt="Skin Abduction"></div>
+                    <div class="case-img-box"><img src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotujweztwWLhHYiRvG8--g5a0m_7zO6-dn2xZ_Isp3-uW8Yjy2FLhqEpuMGiicY_Cd1RsNlqGr1brk-m9g8O9vMrNy3s263VztH-MmhqywUYMMe7J7F0/200fx140f"></div>
                     <div class="case-footer"><span class="case-name">Skin Abduction</span><span class="case-price">32,00 zł</span></div>
                 </div>
-
-                <div class="case-card" onclick="alert('Otwierasz Chicken Expedition')">
+                <div class="case-card" onclick="alert('Chicken Expedition')">
                     <div class="case-badges"><span class="badge-new">Nowość</span><span class="badge-pts">♥ 230</span></div>
-                    <div class="case-img-box"><img src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV092lnYmOhcj5Nr_Yg2Zu5Mx2gv2SrNql3wDjqBtrMTvyJteccgY6NArT_gK9k7ru1sDv7p_AzHE37nRw5yuMmEezhx1SLrs8079mO64/200fx140f" alt="Chicken Expedition"></div>
+                    <div class="case-img-box"><img src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV092lnYmOhcj5Nr_Yg2Zu5Mx2gv2SrNql3wDjqBtrMTvyJteccgY6NArT_gK9k7ru1sDv7p_AzHE37nRw5yuMmEezhx1SLrs8079mO64/200fx140f"></div>
                     <div class="case-footer"><span class="case-name">Chicken Expedition</span><span class="case-price">60,00 zł</span></div>
                 </div>
-
-                <div class="case-card" onclick="alert('Otwierasz Alien Rush')">
+                <div class="case-card" onclick="alert('Alien Rush')">
                     <div class="case-badges"><span class="badge-new">Nowość</span><span class="badge-pts">♥ 460</span></div>
-                    <div class="case-img-box"><img src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJn7-HkvP9JITTglRd4cJ5nqeW9Irz2Qbj-0FuYWn6Io6WcwVoNArTr1Drx7u5gcO07pnKm3VlvDYrsynCnkSwhhhEa-M81_vIRQ/200fx140f" alt="Alien Rush"></div>
+                    <div class="case-img-box"><img src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJn7-HkvP9JITTglRd4cJ5nqeW9Irz2Qbj-0FuYWn6Io6WcwVoNArTr1Drx7u5gcO07pnKm3VlvDYrsynCnkSwhhhEa-M81_vIRQ/200fx140f"></div>
                     <div class="case-footer"><span class="case-name">Alien Rush</span><span class="case-price">120,00 zł</span></div>
                 </div>
             </div>
         </div>
 
-        <!-- 2. ZAKŁADKA EVENT -->
-        <div id="page-event" class="page-content">
-            <div class="generic-page-view">
-                <h2>EVENT SPACE SKINS</h2>
-                <p>Tutaj wrzucisz misje eventowe i nagrody dla znajomych!</p>
-            </div>
-        </div>
-
-        <!-- 3. ZAKŁADKA BITWY -->
-        <div id="page-bitwy" class="page-content">
-            <div class="generic-page-view">
-                <h2>BITWY SKRZYNEK</h2>
-                <p>Stwórz pokój bitwy i zaproś kolegę do pojedynku.</p>
-            </div>
-        </div>
-
-        <!-- 4. ZAKŁADKA KONTRAKT -->
-        <div id="page-kontrakt" class="page-content">
-            <div class="generic-page-view">
-                <h2>KONTRAKTY</h2>
-                <p>Wymień skiny na lepszy drop.</p>
-            </div>
-        </div>
-
-        <!-- 5. ZAKŁADKA EXCHANGER -->
-        <div id="page-exchanger" class="page-content">
-            <div class="generic-page-view">
-                <h2>EXCHANGER</h2>
-                <p>Wymiana przedmiotów między graczami.</p>
-            </div>
-        </div>
+        <!-- POZOSTAŁE ZAKŁADKI -->
+        <div id="page-event" class="page-content"><div class="generic-page-view"><h2>EVENT SPACE SKINS</h2><p>Misje i nagrody eventowe.</p></div></div>
+        <div id="page-bitwy" class="page-content"><div class="generic-page-view"><h2>BITWY SKRZYNEK</h2><p>Bitwy z innymi graczami.</p></div></div>
+        <div id="page-kontrakt" class="page-content"><div class="generic-page-view"><h2>KONTRAKTY</h2><p>Wymień skiny na lepszy drop.</p></div></div>
+        <div id="page-exchanger" class="page-content"><div class="generic-page-view"><h2>EXCHANGER</h2><p>Wymiana przedmiotów.</p></div></div>
 
     </div>
 
